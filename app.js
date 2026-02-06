@@ -198,7 +198,7 @@ function parseCSV(text) {
 
 async function loadData() {
     // In a real deployment, ensure this path is correct
-    const res = await fetch("./data/telco_sample.csv");
+    const res = await fetch("telco_sample.csv");
     if (!res.ok) throw new Error("Failed to load CSV");
     const text = await res.text();
     return parseCSV(text);
